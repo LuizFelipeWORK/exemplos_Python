@@ -7,11 +7,11 @@ class EmailInvalidoError(Exception):
 
 
 class Funcionario:
-    SALARIO_MINIMO = 1412.00  # Valor base para referência
+    SALARIO_MINIMO = 1512.00 
 
     def __init__(self, nome: str, salario: float):
         self.nome = nome
-        self.salario = salario  # Executa a validação do setter
+        self.salario = salario  #validação do setter
 
     @property
     def salario(self) -> float:
