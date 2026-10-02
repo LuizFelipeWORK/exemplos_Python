@@ -1,4 +1,3 @@
-# --- Exceções do Domínio Bancário ---
 class ErroDeConta(Exception):
     """Classe base para erros de domínio bancário."""
 
@@ -17,7 +16,6 @@ class LimiteExcedidoError(ErroDeConta):
     pass
 
 
-# --- Entidade da Conta ---
 class ContaBancaria:
     LIMITE_SAQUE = 1000.00
 
@@ -87,7 +85,7 @@ def caixa_eletronico():
         except ValueError:
             print("Erro de entrada: Digite apenas valores numéricos válidos.")
         except ErroDeConta as e:
-            # Captura unificada para os 3 erros do domínio (ValorInvalido, SaldoInsuficiente, LimiteExcedido)
+            #captura os 3 erros: ValorInvalido, SaldoInsuficiente e LimiteExcedido
             print(f"Falha na Operação ({e.__class__.__name__}): {e}")
 
 
